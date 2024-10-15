@@ -20,7 +20,6 @@ import zone01dakar.productservice.response.ApiResponse;
 @RestController
 @RequestMapping("api/products")
 public class ProductController {
-
 @Autowired
 ProductService productService;
     @PostMapping("")
@@ -46,11 +45,10 @@ ProductService productService;
             HttpStatus.OK.value(),"success", product);
             return ResponseEntity.ok(apiResponse);
     }
-
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteProduct(@PathVariable String id) {
-        productService.deleteProduct(id); // No need for try-catch here
-        return ResponseEntity.noContent().build(); // Return 204 No Content on success
+        productService.deleteProduct(id);
+        return ResponseEntity.noContent().build();
     }
     }
 

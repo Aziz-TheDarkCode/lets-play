@@ -37,7 +37,7 @@ public class ProductService {
     }
     if (updateRequest.getPrice() != null) {
         existingProduct.setPrice(updateRequest.getPrice());
-    }   
+    }
     return productRepository.save(existingProduct);
    }
    public void deleteProduct(String id) {

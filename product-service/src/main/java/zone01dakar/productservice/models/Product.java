@@ -1,6 +1,8 @@
 package zone01dakar.productservice.models;
 import jakarta.validation.constraints.*;
+import lombok.Data;
 
+@Data
 public class Product {
     private String id;
 
@@ -18,45 +20,7 @@ public class Product {
     @NotBlank
     private String userId;
 
-    // Constructor
-    public Product(String name, String description, double price) {
-        this.name = name;
-        this.description = description;
-        this.price = price;
-    }
 
-    // Getter and Setter for name
-    public String getName() {
-        return name;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
-    // Getter and Setter for description
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    // Getter and Setter for price
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public String getUserId() {
-        return userId;
-    }
-
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
 }
